@@ -1,0 +1,7 @@
+build
+temp
+coverage
+.next
+public/mockServiceWorker.js
+tailwind.config.ts
+.prettierrc
