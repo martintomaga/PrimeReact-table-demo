@@ -1,5 +1,11 @@
 ## Prime table demo application
 
+Init:
+
+```bash
+yarn
+```
+
 Run with:
 
 ```bash
