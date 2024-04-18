@@ -1,0 +1,14 @@
+{
+  "cs": {
+    "app": {
+      "firstName": "Jméno",
+      "lastName": "Příjemní",
+      "address": "Adresa",
+      "email": "Email",
+      "phoneNumber": "Telefon",
+      "note": "Poznámka",
+      "weight": "Váha",
+      "height": "Výška"
+    }
+  }
+}

@@ -5,6 +5,7 @@ import { FilterMatchMode } from 'primereact/api';
 import { getLoggedUserName } from '../../features/user';
 import { useClientTableDataQuery, useTableColumnsQuery } from '../../modules/table/queries';
 import TableHeader from '../../components/table/TableHeader';
+import { getMessage } from '../../features/localization';
 
 const TABLE_NAME = 'ClientSideTable';
 
@@ -13,10 +14,10 @@ const ClientSideTable = () => {
   const { data: visibleColumns } = useTableColumnsQuery(TABLE_NAME, getLoggedUserName());
 
   const columns = [
-    { field: 'firstName', header: 'Firstname' },
-    { field: 'lastName', header: 'Surname' },
-    { field: 'email', header: 'Email' },
-    { field: 'phoneNumber', header: 'Phone number' },
+    { field: 'firstName', header: getMessage('firstName') },
+    { field: 'lastName', header: getMessage('lastName') },
+    { field: 'email', header: getMessage('email') },
+    { field: 'phoneNumber', header: getMessage('phoneNumber') },
   ];
 
   const filters = {

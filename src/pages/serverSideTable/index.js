@@ -8,19 +8,20 @@ import { InputNumber } from 'primereact/inputnumber';
 import TableHeader from '../../components/table/TableHeader';
 import { getLoggedUserName } from '../../features/user';
 import { useServerTableDataQuery, useTableColumnsQuery } from '../../modules/table/queries';
+import { getMessage } from '../../features/localization';
 
 const TABLE_NAME = 'ServerSideTable';
 
 const ServerSideTable = () => {
   const columns = [
-    { field: 'firstName', header: 'Firstname' },
-    { field: 'lastName', header: 'Surname' },
-    { field: 'email', header: 'Email' },
-    { field: 'phoneNumber', header: 'Phone number' },
-    { field: 'note', header: 'Note' },
-    { field: 'address', header: 'Address' },
-    { field: 'weight', header: 'Weight' },
-    { field: 'height', header: 'Height' },
+    { field: 'firstName', header: getMessage('firstName') },
+    { field: 'lastName', header: getMessage('lastName') },
+    { field: 'email', header: getMessage('email') },
+    { field: 'phoneNumber', header: getMessage('phoneNumber') },
+    { field: 'note', header: getMessage('note') },
+    { field: 'address', header: getMessage('address') },
+    { field: 'weight', header: getMessage('weight') },
+    { field: 'height', header: getMessage('height') },
   ];
 
   const filters = {
@@ -100,7 +101,7 @@ const ServerSideTable = () => {
           <Column
             key="firstName"
             field="firstName"
-            header="Firstname"
+            header={getMessage('firstName')}
             sortable
             filter
             hidden={!visibleColumns?.includes('firstName')}
@@ -109,7 +110,7 @@ const ServerSideTable = () => {
           <Column
             key="lastName"
             field="lastName"
-            header="Surname"
+            header={getMessage('lastName')}
             sortable
             filter
             hidden={!visibleColumns?.includes('lastName')}
@@ -118,7 +119,7 @@ const ServerSideTable = () => {
           <Column
             key="phoneNumber"
             field="phoneNumber"
-            header="Phone number"
+            header={getMessage('phoneNumber')}
             sortable
             filter
             hidden={!visibleColumns?.includes('phoneNumber')}
@@ -127,7 +128,7 @@ const ServerSideTable = () => {
           <Column
             key="email"
             field="email"
-            header="Email"
+            header={getMessage('email')}
             sortable
             filter
             hidden={!visibleColumns?.includes('email')}
@@ -138,7 +139,7 @@ const ServerSideTable = () => {
           <Column
             key="address"
             field="address"
-            header="Address"
+            header={getMessage('address')}
             sortable
             filter
             hidden={!visibleColumns?.includes('address')}
@@ -147,7 +148,7 @@ const ServerSideTable = () => {
           <Column
             key="weight"
             field="weight"
-            header="Weight"
+            header={getMessage('weight')}
             sortable
             filter
             filterElement={numberFilterTemplate}
@@ -158,7 +159,7 @@ const ServerSideTable = () => {
           <Column
             key="height"
             field="height"
-            header="Height"
+            header={getMessage('height')}
             sortable
             filter
             filterElement={numberFilterTemplate}
